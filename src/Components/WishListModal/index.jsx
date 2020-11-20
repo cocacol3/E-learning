@@ -1,4 +1,4 @@
-import { Box } from "@material-ui/core";
+import { Button, Box } from "@material-ui/core";
 import React, { useState, useEffect } from "react";
 import { useDispatch } from "react-redux";
 import { NavLink } from "react-router-dom";
@@ -6,7 +6,7 @@ import {
   Modal,
   ModalHeader,
   ModalBody,
-  Button,
+  ModalFooter,
   Form,
   FormGroup,
   Row,
@@ -46,6 +46,10 @@ const WishListModal = (props) => {
           <ModalBody>
             {renderWishListItem()}
           </ModalBody>
+          <ModalFooter>
+            <Button color="primary">Cancel</Button>
+            <Button color="secondary">Confirm</Button>
+          </ModalFooter>
         </Modal>
       </Box>
     </>
