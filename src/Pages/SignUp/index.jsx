@@ -148,7 +148,6 @@ const SignUp = () => {
               </form>
             </Container>
           </Box>
-          <Footer />
         </>
       )}
     </>

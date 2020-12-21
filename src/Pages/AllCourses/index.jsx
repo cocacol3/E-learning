@@ -1,14 +1,12 @@
 import { Box } from "@material-ui/core";
 import React, { useState } from "react";
 import PageHeader from "../../Components/PageHeader/index";
-import PageBanner from "../../Components/PageBanner/index";
-import Footer from "../../Components/Footer/index";
-import PreloadingPage from "../../Components/PreloadingPage/index";
 import AllCourseItem from "../../Components/AllCourseItem/index";
 import "./index.scss";
 import { useEffect } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { getListCourse } from "../../Action/courseAction";
+import PreloadingPage from "../../Components/PreloadingPage/index";
 import { Container, Row } from "reactstrap";
 
 const AllCourses = () => {
@@ -44,7 +42,6 @@ const AllCourses = () => {
       ) : (
         <>
           <PageHeader />
-          <PageBanner />
           <Container>
             <Box className="allCourse">
               <Box textAlign="center" className="allCourse__headline">
@@ -55,7 +52,6 @@ const AllCourses = () => {
               <Row>{renderCourseList()}</Row>
             </Box>
           </Container>
-          <Footer />
         </>
       )}
     </>

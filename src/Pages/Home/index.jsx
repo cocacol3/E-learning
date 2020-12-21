@@ -1,24 +1,22 @@
 import React, { useState } from "react";
-import { withStyles } from "@material-ui/core/styles";
 import Header from "../../Components/Header/index";
 import Carousel from "../../Components/Carousel/index";
 import Banner from "../../Components/Banner/index";
 import Category from "../../Components/Category/index";
 import AdverBanner from "../../Components/AdverBanner/index";
 import Course from "../../Components/Course";
-import BottomBanner from "../../Components/BottomBanner";
-import OurTeacher from "../../Components/OurTeachers";
-import Event from "../../Components/UpcomingEvent";
-import Footer from "../../Components/Footer";
+import BottomBanner from "../../Components/HomeBottomBanner";
+import OurTeacher from "../../Components/HomeOurTeachers";
+import Event from "../../Components/HomeUpcomingEvent";
 import PreloadingPage from "../../Components/PreloadingPage/index";
 
 const Home = () => {
   //Loading Page
-  const [loadingPage, setLoadingPage] = useState(true);
+  const [loadingPage, setLoadingPage] = useState(false);
   setTimeout(() => {
     setLoadingPage(false);
   }, 1200);
-  // End of loaing page
+  // End of loading page
 
   return (
     <>
@@ -35,7 +33,6 @@ const Home = () => {
           <BottomBanner />
           <OurTeacher />
           <Event />
-          <Footer />
         </>
       )}
     </>
